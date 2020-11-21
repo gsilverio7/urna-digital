@@ -17,13 +17,9 @@
 
   <h2 class="title02">Apuração</h2>
 
-  <div class="grid">
-
   <?php 
     include 'apuracao.php';
   ?>
-
-  </div>
 
 </body>
 </html>

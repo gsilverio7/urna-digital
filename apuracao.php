@@ -30,6 +30,8 @@ while($row = mysqli_fetch_array($result)) {
 $sql = " SELECT * FROM candidatos JOIN votos ON candidatos.numero=votos.id ORDER BY votos DESC";
 $result = $conn->query($sql);
 
+echo "<h3 class=contador> Foram computados " . $totalvotos . " votos no total. </h3>";
+echo "<div class=grid>";
 
 while($row = mysqli_fetch_array($result)) {
   echo "<div class=grid-item>";
@@ -43,6 +45,7 @@ while($row = mysqli_fetch_array($result)) {
   echo "</div>";
 }
 
+echo "</div>";
 
 $conn->close();
         
