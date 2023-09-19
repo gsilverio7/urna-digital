@@ -8,7 +8,9 @@ window.onload = function() {
   //   child.addEventListener('click', alert('rte'));
   // });
   for (let i = 0; i < children.length; i++) {
-    children[i].addEventListener('click', apertarTecla);
+    if (children[i].id !== 'tnull') {
+      children[i].addEventListener('click', apertarTecla);
+    }
   }
 }
 
