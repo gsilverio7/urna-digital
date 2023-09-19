@@ -1,6 +1,25 @@
 y = "";
 i = 0;
 
+window.onload = function() {
+  const children = document.getElementById('teclas').children;
+  console.log(children);
+  // children.forEach(child => {
+  //   child.addEventListener('click', alert('rte'));
+  // });
+  for (let i = 0; i < children.length; i++) {
+    children[i].addEventListener('click', apertarTecla);
+  }
+}
+
+function apertarTecla(e){
+  console.log('teste');
+  e.target.classList.add('apertarTecla');
+  setTimeout(() => {
+    e.target.classList.remove('apertarTecla');
+  }, 100)
+}
+
 function addNum(x){
 
     if (i === 0){
@@ -8,6 +27,7 @@ function addNum(x){
         y = y + x;
     }
 
+    /*
     if (y.length === 2) {
         i = 1;
         var xmlhttp = new XMLHttpRequest();
@@ -19,6 +39,7 @@ function addNum(x){
         xmlhttp.open("GET", "model.php?q=" + y, true);
         xmlhttp.send();
     }
+    */
 }
 
 function corrige(){
