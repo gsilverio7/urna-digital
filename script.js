@@ -13,7 +13,7 @@ window.onload = function() {
 }
 
 function apertarTecla(e){
-  console.log('teste');
+  new Audio('/assets/sounds/tecla.mp3').play();
   e.target.classList.add('apertarTecla');
   setTimeout(() => {
     e.target.classList.remove('apertarTecla');
@@ -65,6 +65,8 @@ function branco(){
 }
 
 function confirma(){
+  new Audio('/assets/sounds/urna.mp3').play();
+
   if (y.length >= 2){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
